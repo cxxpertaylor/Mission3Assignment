@@ -9,6 +9,7 @@ namespace Mission3Assignment
 {
     internal class FoodItem
     {
+        //declare attributes of a food item (name, category, quantity, expiration date)
         public string Name = "";
         public string Category = "";
         public int Quantity = 0;

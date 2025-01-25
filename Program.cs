@@ -19,7 +19,7 @@ internal class Program
             Console.Write("\nPlease select an option (1-4): ");
             string selection = Console.ReadLine();
 
-            List<string> validInputs = new List<string> { "1", "2", "3", "4" };
+            List<string> validInputs = new List<string> { "1", "2", "3", "4" }; //list of valid menu options
 
             if (validInputs.Contains(selection))
             {
@@ -32,7 +32,7 @@ internal class Program
                     Console.Write("Enter the category: ");
                     string category = Console.ReadLine();
 
-                    //get quantity from user and make sure the user enters a number
+                    //get quantity from user and make sure the user enters a number greater than 0
                     bool isValid = false;
                     int quantity = 0;
                     while (!isValid)
@@ -48,6 +48,7 @@ internal class Program
                        
                     }
 
+                    //get the expiration date from the user and make sure they enter a valid date
                     DateTime expirationDate = DateTime.MinValue;
                     isValid = false;
                     while (!isValid)
@@ -83,6 +84,7 @@ internal class Program
                         {
                             Console.WriteLine("\nItem list:");
 
+                            //show the options to delete
                             for (int i = 0; i < foodItems.Count; i++)
                             {
                                 Console.WriteLine((i + 1) + ": " + foodItems[i].Name);
@@ -98,19 +100,10 @@ internal class Program
                                 Console.WriteLine("Invalid option. Please choose a number 1-" + foodItems.Count);
                             }
                         }
-                            //try
-                            //{
+
                             foodItems.RemoveAt(deleteItem - 1);
                             Console.WriteLine("Item deleted successfully.\n");
-                            //}
-                            //catch
-                            //{
-                            //    Console.WriteLine("Invalid option. Please choose a number 1-" + foodItems.Count);
-                            //}
-                        
-                            
 
-                      
                     }
                 }
 
