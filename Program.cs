@@ -120,7 +120,7 @@ internal class Program
                     {
                         if (food.ExpirationDate > DateTime.Now)
                         {
-                            Console.WriteLine("Name: " + food.Name + "  Expiration Date: " + food.ExpirationDate + "\n");
+                            Console.WriteLine("Name: " + food.Name + "\tCategory: " + food.Category + "\tQuantity: " + food.Quantity + "\tExpiration Date: " + food.ExpirationDate + "\n");
                         }
                     }
                 }
